@@ -1,0 +1,64 @@
+[
+  {
+    "requestId": 1,
+    "name": "Cecil Ward",
+    "companyName": "The Definitely Real AV Company",
+    "phone": "555-123-4567",
+    "email": "cecil.w@gmail.com",
+     "shipTo": "7709 Livingston Street Sody Daisy, TN 37379",
+    "requestApproved": false,
+    "pupCode": 0
+  },
+
+  {
+    "requestId": 2,
+    "name": "Devin Smith",
+    "companyName": "Smith Home Theater",
+    "phone": "154-574-1658",
+    "email": "smiththeater@gmail.com",
+    "shipTo": "9040 Old Harrison Drive, Groton, CT 06340",
+    "requestApproved": true,
+    "pupCode": 123456
+  },
+  {
+    "requestId": 3,
+    "name": "Andres Olvera",
+    "companyName": "Expert Security Consultants",
+    "phone": "568-284-5628",
+    "email": "andres.olvera@esc.com",
+    "shipTo": "9068 Talbot Drive, New Lenox, IL 60451",
+    "requestApproved": false,
+    "pupCode": 0
+  },
+  {
+    "requestId": 4,
+    "name": "Malik Sharpe",
+    "companyName": "REAL A/V",
+    "phone": "482-369-3745",
+    "email": "info@realaudio.com",
+    "shipTo": "9324 Homestead Court, Parkersburg, WV 26101",
+    "requestApproved": false,
+    "pupCode": 0
+  },
+  {
+    "requestId": 5,
+    "name": "Trey Marshall",
+    "companyName": "AVI",
+    "phone": "154-574-1658",
+    "email": "trey@avi.com",
+    "shipTo": "67 Pin Oak Street, Southgate, MI 48195",
+    "requestApproved": true,
+    "pupCode": 55555
+  },
+  {
+    "requestId": 6,
+    "name": "Damon Stephenson",
+    "companyName": "Home Theater Specialists of Florida",
+    "phone": "662-108-4022",
+    "email": "stephenson.damon@htsflorida.com",
+    "shipTo": "765 Main St., Ormond Beach, FL 32174",
+    "requestApproved": false,
+    "pupCode": 0
+  }
+  
+]

@@ -1,0 +1,15 @@
+footer{
+  height: 10vh;
+  
+  background-color: grey;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer p{
+  color: rgb(5, 107, 5);
+  font-size: large;
+  margin-left: 20px;
+  
+}

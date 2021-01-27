@@ -1,0 +1,16 @@
+.pup_request{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center ;
+  border: 1px green solid
+}
+
+.pup_request h5{
+  margin-right: 10px;
+}
+
+.pup_request p{
+  font-size: smaller;
+  width: 150px;
+}
