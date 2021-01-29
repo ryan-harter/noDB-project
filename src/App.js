@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import UserRequests from './Components/UserRequests'
 import DisplayArea from './Components/DisplayArea'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
@@ -13,18 +12,6 @@ class App extends Component {
     super()
     this.state = {
       userData: [],
-    //   userData: {
-    //     requestID: null,
-    //     name: '',
-    //     companyName: '',
-    //     contactInfo: {
-    //       phone: '',
-    //       email: '',
-    //       shipTo: '',
-    //     },
-    //     requestApproved: false,
-    //     pupCode: null
-    // }
       }
       
       this.deleteRequest = this.deleteRequest.bind(this)
@@ -47,17 +34,16 @@ class App extends Component {
 
 
   updatePUPStatus = (id, bool, code) => {
-    console.log('hit update status', id, bool, code)
     const body = {
       requestApproved: bool,
       pupCode: code
     }
     axios.put(`/api/requests/${id}`, body).then( response =>{
-      console.log(response.data)
       this.setState({
         userData: response.data
       })
-      
+    }).catch(err =>{
+      alert('something went wrong')
     })
   }
 
@@ -67,6 +53,8 @@ class App extends Component {
       this.setState({
         userData: response.data
       })
+    }).catch(err =>{
+      alert('something went wrong')
     })
   }
   
@@ -78,7 +66,6 @@ class App extends Component {
   }
 
   addRequest(){
-    console.log('hit add request')
     const {name, companyName, phone, email, shipTo, requestApproved, pupCode} = this.state
 
     const body = {
@@ -94,10 +81,11 @@ class App extends Component {
     console.log(body, this.state)
 
     axios.post(`/api/requests/`, body).then( response => {
-      console.log(response)
       this.setState({
         userData: response.data
       })
+    }).catch(err =>{
+      alert('something went wrong')
     })
   }
 
@@ -106,14 +94,14 @@ class App extends Component {
   
   render(){
     let {userData} = this.state
-    let mappedData = userData.map(e => <p>data</p>)
+    
 
     return (
       <div className="App">
         <Header userData={userData} getRequestList={this.getRequestList}/>
         
         <h2>New Request</h2>
-        <input placeholder="name" name="name" onChange={(e) => this.handleChange(e)}/>
+        <input placeholder="Name" name="name" onChange={(e) => this.handleChange(e)}/>
         <input placeholder="Company Name" name="companyName" onChange={e =>this.handleChange(e)}/>
         <input placeholder="Phone" name="phone" onChange={e =>this.handleChange(e)}/>
         <input placeholder="Email" name="email" onChange={e =>this.handleChange(e)}/>

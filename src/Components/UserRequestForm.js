@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './userRequestForm.css'
 
 export default class UserRequestForm extends Component {
   constructor(props){
@@ -51,7 +52,7 @@ export default class UserRequestForm extends Component {
       <div>
         <h1>User Request Form</h1>
         <button onClick={this.handleBack}>Back</button>
-        <main>
+        <main id='single_request'>
           <p>Request ID: {element.requestId}</p>
           <p>Name: {element.name}  </p>
           <p>Company Name: {element.companyName} </p>
@@ -61,9 +62,11 @@ export default class UserRequestForm extends Component {
           <p>Request Status: {element.requestApproved ? 'Approved' : 'Pending'} </p>
           {!this.state.isEditing ? (<p>PUP Code: {element.pupCode || this.state.pupCode} </p>): (<input defaultValue={element.pupCode || this.state.pupCode} onChange={(e) => this.handleCode(e)} />)}
         </main>
-        <button onClick={() => {this.handleStatus(element.requestId, !element.requestApproved, this.state.pupCode)}}>{element.requestApproved ? 'Disapprove' : 'Approve'}</button>
-        <button onClick={this.handleEdit}>Add/Edit PUP Code</button>
-        <button onClick={() => this.handleDelete(element.requestId)}>Delete</button>
+        <div className='buttons'>
+          <button onClick={this.handleEdit}>Add/Edit PUP Code</button>
+          <button onClick={() => {this.handleStatus(element.requestId, !element.requestApproved, this.state.pupCode)}}>{element.requestApproved ? 'Disapprove' : 'Approve'}</button>
+          <button onClick={() => this.handleDelete(element.requestId)}>Delete</button>
+        </div>
         
       </div>
     )

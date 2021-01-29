@@ -36,7 +36,7 @@ export default class Header extends Component {
     return (
       <header>
         <img alt='luxul_logo.png' src={logo}/>
-        <h1>Luxul PUP Code Tracker</h1>
+        <h1>PUP Code Tracker</h1>
         <div>
           <input name='email' placeholder='Email Search' onChange={e => this.handleChange(e)}/>
           <button onClick={() => {this.submitQuery()}}>Search</button>

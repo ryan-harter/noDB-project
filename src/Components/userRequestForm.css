@@ -1,0 +1,16 @@
+.buttons {
+  margin: 4px;
+  padding: 5px;
+}
+
+.buttons button{
+  margin: 5px;
+  background-color: rgb(5, 170, 5);
+  border-radius: 100%;
+  padding: 5px;
+}
+
+.buttons button:hover{
+  background-color: black;
+  color: white;
+}

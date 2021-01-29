@@ -1,7 +1,7 @@
 import React from 'react'
 import UserRequestForm from './UserRequestForm'
 import UserRequests from './UserRequests'
-import axios from 'axios'
+
 
 export default class DisplayArea extends React.Component {
   constructor(props){
@@ -33,7 +33,7 @@ export default class DisplayArea extends React.Component {
   render(){
     
     let {userData, addRequest, deleteRequest, getRequestList, updatePUPStatus} = this.props
-    let {requestToEdit, isEditing, selected} = this.state
+    let {isEditing, selected} = this.state
 
 
     let requestMapped = userData.map(userObj =>{
@@ -47,10 +47,11 @@ export default class DisplayArea extends React.Component {
 
     return (
       <div>
-        <h2>Active PUP Requests</h2>
+        
       
         {isEditing === false ? (
         <>
+        <h2>Active PUP Requests</h2>
         {requestMapped}
         </>
         )
